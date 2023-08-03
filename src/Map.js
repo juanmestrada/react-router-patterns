@@ -23,7 +23,7 @@ const Map = () => {
             }
 
             try {
-                const response = await axios.get("https://github.com/juanmestrada/react-router-patterns/blob/main/db.json");
+                const response = await axios.get("https://raw.githubusercontent.com/juanmestrada/react-router-patterns/main/db.json");
                 
                 setDogs({
                     data: response.data.map(el => ({
