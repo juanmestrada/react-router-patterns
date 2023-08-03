@@ -26,7 +26,7 @@ const Map = () => {
                 const response = await axios.get("https://raw.githubusercontent.com/juanmestrada/react-router-patterns/main/db.json");
                 
                 setDogs({
-                    data: response.data.map(el => ({
+                    data: response.dogs.map(el => ({
                         name: el.name,
                         age: el.age, 
                         src: el.src,
