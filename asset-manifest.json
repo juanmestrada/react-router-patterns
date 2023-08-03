@@ -1,15 +1,18 @@
 {
   "files": {
     "main.css": "/react-router-patterns/static/css/main.7f236aad.css",
-    "main.js": "/react-router-patterns/static/js/main.80273e2a.js",
+    "main.js": "/react-router-patterns/static/js/main.7d3e41b3.js",
     "static/js/496.0461645e.chunk.js": "/react-router-patterns/static/js/496.0461645e.chunk.js",
+    "static/media/whiskey.jpg": "/react-router-patterns/static/media/whiskey.7650f3f2b68e4bebacaa.jpg",
+    "static/media/duke.jpg": "/react-router-patterns/static/media/duke.a2a605e8b55545c21c28.jpg",
+    "static/media/perry.jpg": "/react-router-patterns/static/media/perry.26aa759591c047a1c58c.jpg",
     "index.html": "/react-router-patterns/index.html",
     "main.7f236aad.css.map": "/react-router-patterns/static/css/main.7f236aad.css.map",
-    "main.80273e2a.js.map": "/react-router-patterns/static/js/main.80273e2a.js.map",
+    "main.7d3e41b3.js.map": "/react-router-patterns/static/js/main.7d3e41b3.js.map",
     "496.0461645e.chunk.js.map": "/react-router-patterns/static/js/496.0461645e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f236aad.css",
-    "static/js/main.80273e2a.js"
+    "static/js/main.7d3e41b3.js"
   ]
 }
