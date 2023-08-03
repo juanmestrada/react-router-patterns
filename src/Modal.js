@@ -16,12 +16,12 @@ const CustomModal = ({ dogs}) => {
             <Modal dialogClassName="modal-dialog modal-dialog-scrollable" show={true} backdrop={false} >
                 <Modal.Header>
                     <Modal.Title>Name: {currentDog.name}, Age: {currentDog.age}</Modal.Title>
-                    <Link to="/">
+                    <Link to="/react-router-patterns/">
                         <CloseButton aria-label="Hide" />
                     </Link>
                 </Modal.Header>
                 <Modal.Body >
-                    <img src={`{${process.env.PUBLIC_URL}/${currentDog.src}.jpg}`} alt={currentDog.name} />
+                    <img src={currentDog.src} alt={currentDog.name} />
                     <ul>
                         {currentDog.facts && currentDog.facts.map((fact, i) => (
                             <li key={i}><i className='modal-dialog-li'>🦴</i> {fact}</li>

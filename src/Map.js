@@ -5,6 +5,9 @@ import { useState, useEffect } from 'react';
 import axios from "axios";
 import Modal from './Modal';
 import './Map.css';
+import whiskey from './assets/whiskey.jpg';
+import duke from './assets/duke.jpg';
+import perry from './assets/perry.jpg';
 
 const Map = () => {
     const [defaultCoords, setDefaultCoords] = useState({lat: 29.7604, long: -95.3698})
@@ -29,7 +32,7 @@ const Map = () => {
                     data: response.data.dogs.map(el => ({
                         name: el.name,
                         age: el.age, 
-                        src: el.src,
+                        src: getImg(el.src),
                         facts: el.facts,
                         position: getLatLong() 
                     })),
@@ -42,12 +45,19 @@ const Map = () => {
         }
         getDogs();
     }, [])
+    const getImg = (src) => {
+        if(src === 'whiskey') return whiskey;
+
+        if (src === "duke") return duke;
+
+        if(src === "perry") return perry;
+    }
     const createIcon = (dog) => {
         return new L.Icon({
-            iconUrl: `./react-router-patterns/${dog.src}.jpg`,
+            iconUrl: `${dog.src}`,
             iconSize: [80, 80],
             className: "leaf-iconn",
-            win_url:`/dogs/${dog.name.toLowerCase()}`
+            win_url:`/react-router-patterns/dogs/${dog.name.toLowerCase()}`
         });
     }
     const getMarkerIcon = (dog) => {
@@ -79,7 +89,7 @@ const Map = () => {
                         )
                     })} 
                 />
-                {!dogs.isLoading && <Route path="/dogs/:name" element={<Modal dogs={dogs.data} />}/>}
+                {!dogs.isLoading && <Route path="/react-router-patterns/dogs/:name" element={<Modal dogs={dogs.data} />}/>}
             </Routes>
         </MapContainer>
     )
