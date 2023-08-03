@@ -20,7 +20,7 @@ const CustomModal = ({ dogs}) => {
                     </Link>
                 </Modal.Header>
                 <Modal.Body >
-                    <img src={`%PUBLIC_URL%/${currentDog.src}.jpg`} alt={currentDog.name} />
+                    <img src={`{${process.env.PUBLIC_URL}/${currentDog.src}.jpg}`} alt={currentDog.name} />
                     <ul>
                         {currentDog.facts && currentDog.facts.map((fact, i) => (
                             <li key={i}><i className='modal-dialog-li'>🦴</i> {fact}</li>
@@ -28,7 +28,7 @@ const CustomModal = ({ dogs}) => {
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>
-                    <p className="fs-6 footer-text"><img src="%PUBLIC_URL%//doge.png" alt='logo'/> <span>Dog Finder</span></p>
+                    <p className="fs-6 footer-text"><img src={`${process.env.PUBLIC_URL}/doge.png`} alt='logo'/> <span>Dog Finder</span></p>
                 </Modal.Footer>
             </Modal>
         )

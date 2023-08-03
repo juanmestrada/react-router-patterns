@@ -44,7 +44,7 @@ const Map = () => {
     }, [])
     const createIcon = (dog) => {
         return new L.Icon({
-            iconUrl: `./react-router-patterns/${dog.src}.jpg`,
+            iconUrl: `{${process.env.PUBLIC_URL}/${dog.src}.jpg}`,
             iconSize: [80, 80],
             className: "leaf-iconn",
             win_url:`/dogs/${dog.name.toLowerCase()}`
@@ -65,7 +65,7 @@ const Map = () => {
             {dogs.isLoading && <div className='is-loading'></div>}        
             <Routes>
                 <Route 
-                    path="/" 
+                    path="https://juanmestrada.github.io/react-router-patterns/" 
                     element={dogs.data && dogs.data.map(d => {
                         return (
                             <Marker 
@@ -79,7 +79,7 @@ const Map = () => {
                         )
                     })} 
                 />
-                {!dogs.isLoading && <Route path="/dogs/:name" element={<Modal dogs={dogs.data} />}/>}
+                {!dogs.isLoading && <Route path="https://juanmestrada.github.io/react-router-patterns/dogs/:name" element={<Modal dogs={dogs.data} />}/>}
             </Routes>
         </MapContainer>
     )
