@@ -20,7 +20,7 @@ const CustomModal = ({ dogs}) => {
                     </Link>
                 </Modal.Header>
                 <Modal.Body >
-                    <img src={`/${currentDog.src}.jpg`} alt={currentDog.name} />
+                    <img src={`./react-router-patterns/${currentDog.src}.jpg`} alt={currentDog.name} />
                     <ul>
                         {currentDog.facts && currentDog.facts.map((fact, i) => (
                             <li key={i}><i className='modal-dialog-li'>🦴</i> {fact}</li>
@@ -28,7 +28,7 @@ const CustomModal = ({ dogs}) => {
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>
-                    <p className="fs-6 footer-text"><img src="/doge.png" alt='logo'/> <span>Dog Finder</span></p>
+                    <p className="fs-6 footer-text"><img src="./react-router-patterns/doge.png" alt='logo'/> <span>Dog Finder</span></p>
                 </Modal.Footer>
             </Modal>
         )

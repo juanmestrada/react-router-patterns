@@ -23,7 +23,7 @@ const Map = () => {
             }
 
             try {
-                const response = await axios.get("http://localhost:5001/dogs");
+                const response = await axios.get("https://github.com/juanmestrada/react-router-patterns/blob/main/db.json");
                 
                 setDogs({
                     data: response.data.map(el => ({
@@ -44,7 +44,7 @@ const Map = () => {
     }, [])
     const createIcon = (dog) => {
         return new L.Icon({
-            iconUrl: `/${dog.src}.jpg`,
+            iconUrl: `./react-router-patterns/${dog.src}.jpg`,
             iconSize: [80, 80],
             className: "leaf-iconn",
             win_url:`/dogs/${dog.name.toLowerCase()}`
