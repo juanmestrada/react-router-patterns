@@ -2,6 +2,7 @@ import './Modal.css';
 import { CloseButton, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
+import logo from "./doge.png";
 
 const CustomModal = ({ dogs}) => {
     const { name } = useParams();
@@ -28,7 +29,7 @@ const CustomModal = ({ dogs}) => {
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>
-                    <p className="fs-6 footer-text"><img src={`${process.env.PUBLIC_URL}/doge.png`} alt='logo'/> <span>Dog Finder</span></p>
+                    <p className="fs-6 footer-text"><img src={logo} alt='logo'/> <span>Dog Finder</span></p>
                 </Modal.Footer>
             </Modal>
         )
