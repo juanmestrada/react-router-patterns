@@ -1,0 +1,21 @@
+.Nav{
+    width: 100%;
+    height: 60px;
+    background-color: #18233b;
+    color: #eed5b1;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Nav-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Nav-logo img{
+    height: 18px;
+    margin-right: 4px;
+}
